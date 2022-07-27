@@ -51,7 +51,10 @@ func (w *winrate) play(t int) {
 			Ai2Handler:    nil,
 			//Ai2Handler: amazonsChess.Ai2Handler,
 		}
+		t := time.Now()
 		g.Start(true)
+		elapsed := time.Now().Sub(t)
+		fmt.Println("该函数执行完成耗时：", elapsed)
 		fmt.Printf("winner is: %v\n", g.Winner)
 		if g.Ai1Handler != nil {
 			fmt.Println("Ai1(blue) is running")
