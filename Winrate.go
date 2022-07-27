@@ -47,9 +47,10 @@ func (w *winrate) play(t int) {
 	for i := 0; i < t; i++ {
 		g := amazonsChess.Game{
 			CurrentPlayer: 1,
-			Ai1Handler:    Ai1Handler,
-			Ai2Handler:    nil,
-			//Ai2Handler: amazonsChess.Ai2Handler,
+			Ai1Handler: nil,
+			Ai2Handler: nil,
+			//Ai1Handler: Ai1Handler,
+			//Ai2Handler: Ai2Handler,
 		}
 		t := time.Now()
 		g.Start(true)
